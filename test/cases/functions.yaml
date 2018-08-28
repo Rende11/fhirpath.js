@@ -262,11 +262,11 @@ tests:
     result: [false]
 
   - desc: '** if argument coll is superset of input coll result is true'
-    expression: Functions.coll1[0].coll2.attr.subsetOf(Functions.attrdouble)
+    expression: Functions.coll1[0].coll2.attr.supersetOf(Functions.attrdouble)
     result: [true]
 
   - desc: '** if argument coll isnt superset of input coll result is false'
-    expression: Functions.attrdouble.subsetOf(Functions.coll1[0].coll2.attr)
+    expression: Functions.attrdouble.supersetOf(Functions.coll1[0].coll2.attr)
     result: [false]
 
 
@@ -296,7 +296,7 @@ tests:
 
   - desc: '** isDistinct of coll with different values'
     expression: Functions.coll1[2].collwithfalse.attr.isDistinct()
-    result: [false]
+    result: [true]
 
 
   - desc: '5.1.12. distinct() : collection'
